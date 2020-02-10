@@ -1,12 +1,21 @@
 apply plugin: 'java'
 
 project.ext {
-    cucumberVersion = '4.7.2'
+//    cucumberVersion = '4.7.2'
 }
 
 dependencies {
-    testImplementation 'io.cucumber:cucumber-java:' + cucumberVersion
-    testImplementation 'io.cucumber:cucumber-junit:' + cucumberVersion
+    //NEW DEPS
+    compile group: 'selenium-cucumber', name: 'selenium-cucumber-java', version: '0.0.1'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.5.2'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.5.2'
+    compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.5'
+    testCompile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.5'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.5'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.5.2'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.5.2'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-ie-driver', version: '3.5.2'
 }
 
 repositories {
